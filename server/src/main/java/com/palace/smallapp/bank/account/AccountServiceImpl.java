@@ -7,7 +7,7 @@ import com.palace.smallapp.bank.AccountService;
 import com.palace.smallapp.bank.Money;
 import com.palace.smallapp.bank.account.event.AccountCreatedEvent;
 import com.palace.smallapp.bank.account.model.Account;
-import com.palace.smallapp.bank.account.query.DefaultAccountQueryService;
+import com.palace.smallapp.bank.account.query.AccountQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +18,7 @@ public class AccountServiceImpl implements AccountService {
     private AccountRepository accountRepository;
 
     @Autowired
-    private DefaultAccountQueryService accountQueryService;
+    private AccountQueryService accountQueryService;
 
     @Autowired
     private EventBus eventPublisher;
